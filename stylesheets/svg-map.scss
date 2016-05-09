@@ -1,0 +1,115 @@
+.inner {
+	width: 95%;
+	max-width: 48.0em;
+}
+
+.map_wrapper {
+    overflow: hidden;
+
+	.mapsvg {
+		position: relative;
+		width: 100%;
+        height: 23em;
+        overflow: hidden;
+
+        svg{
+            width: 100%;
+            height: auto;
+        }
+	}
+
+	form {
+        position: relative;
+        z-index: 999;
+        background-color: transparent;
+
+        float: right;
+        width: 16.5em;
+        margin: 0;
+        padding: 0;
+        border: 0;
+
+        overflow: hidden;
+
+        p{
+            background-color: transparent;
+        }
+
+        p:last-of-type {
+            margin-bottom: 0em;
+        }
+
+        button {
+            display: inline-block;
+        }
+    }
+
+	path {
+		&.state_taboo {
+			fill: #666;
+			stroke: #888;
+			stroke-opacity: 1;
+			stroke-width: 0.75;
+			stroke-miterlimit: 4;
+			stroke-dasharray: none;
+		}
+	}
+
+	.state_taboo text.state_default { fill: #FFF; }
+
+	text {
+		&.state_default { fill: #333; }
+
+		&.state_default,
+		&.state_taboo {
+			font-size: 17px;
+			font-weight: bold;
+			text-align: start;
+			text-anchor: start;
+		}
+
+		&#hi-label { fill: #444; }
+	}
+
+	path,
+	rect {
+		&.state_default {
+
+            -webkit-transition: fill 0.05s ease-in-out 0.05s;
+            -moz-transition: fill 0.05s ease-in-out 0.05s;
+            -o-transition: fill 0.05s ease-in-out 0.05s;
+            transition: fill 0.05s ease-in-out 0.05s;
+
+
+			fill: #EEE;
+			stroke: #888;
+			stroke-opacity: 1;
+			stroke-width: 0.75;
+			stroke-miterlimit: 4;
+			stroke-dasharray: none;
+		}
+	}
+
+	a, g {
+
+        text-decoration: none;
+
+		&:hover,
+		&:focus {
+			path.state_default,
+			rect.state_default {
+				fill: #CCC;
+			}
+		}
+	}
+
+	ul {
+		margin: 2.0em 10%;
+		overflow: auto;
+	}
+
+	li {
+		float: left;
+		width: 33%;
+	}
+}
